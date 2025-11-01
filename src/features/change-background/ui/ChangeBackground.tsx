@@ -92,7 +92,7 @@ export function ChangeBackground() {
         </span>
 
         <div className="grid grid-cols-3 gap-x-3 gap-y-3 overflow-x-hidden">
-          {backgrounds.map((background) => (
+          {backgrounds.map(background => (
             <BackgroundItem key={background.id} background={background} />
           ))}
         </div>

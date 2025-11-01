@@ -16,16 +16,12 @@ export function Home() {
           Welcome!
         </p>
 
-        <Button onClick={open}>
-          Open Sidebar
+        <Button onClick={open} title={'123'}>
+          <span className={'font-italian-plate'}>Open Sidebar</span>
         </Button>
       </div>
 
-      <Sidebar
-        isOpen={isOpen}
-        onClose={close}
-        title="Change background"
-      >
+      <Sidebar isOpen={isOpen} onClose={close} title="Change background">
         <ChangeBackground />
       </Sidebar>
     </div>

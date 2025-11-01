@@ -4,22 +4,23 @@ This directory contains all font files for the Italian Plate No2 Expanded typefa
 
 ## Available Weights
 
-| Weight | Normal | Italic |
-|--------|--------|--------|
-| Thin (100) | ✓ | ✓ |
-| Ultralight (200) | ✓ | ✓ |
-| Extralight (250) | ✓ | ✓ |
-| Light (300) | ✓ | ✓ |
-| Regular (400) | ✓ | ✓ |
-| Medium (500) | ✓ | ✓ |
-| Demibold (600) | ✓ | ✓ |
-| Bold (700) | ✓ | ✓ |
-| Extrabold (800) | ✓ | ✓ |
-| Black (900) | ✓ | ✓ |
+| Weight           | Normal | Italic |
+| ---------------- | ------ | ------ |
+| Thin (100)       | ✓      | ✓      |
+| Ultralight (200) | ✓      | ✓      |
+| Extralight (250) | ✓      | ✓      |
+| Light (300)      | ✓      | ✓      |
+| Regular (400)    | ✓      | ✓      |
+| Medium (500)     | ✓      | ✓      |
+| Demibold (600)   | ✓      | ✓      |
+| Bold (700)       | ✓      | ✓      |
+| Extrabold (800)  | ✓      | ✓      |
+| Black (900)      | ✓      | ✓      |
 
 ## Configuration
 
 The font is configured in:
+
 - `src/fonts.css` - All @font-face declarations
 - `tailwind.config.js` - Font family configuration
 
@@ -36,11 +37,13 @@ The font is configured in:
 ## Available Tailwind Utilities
 
 ### Font Family
+
 ```css
 font-italian-plate          /* Sets font-family to Italian Plate */
 ```
 
 ### Font Weights (use with font-italian-plate)
+
 ```css
 font-thin          /* 100 */
 font-extralight    /* 200 - also font-ultralight */

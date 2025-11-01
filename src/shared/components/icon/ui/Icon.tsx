@@ -42,7 +42,10 @@ const iconMap: Record<IconName, string> = {
  * Universal component for displaying icons
  */
 export const Icon = React.forwardRef<HTMLImageElement, IconProps>(
-  ({ iconName, size = 20, fillColorOnHover, className, style, ...props }, ref) => {
+  (
+    { iconName, size = 20, fillColorOnHover, className, style, ...props },
+    ref
+  ) => {
     const iconSrc = iconMap[iconName]
 
     if (!iconSrc) {
@@ -59,12 +62,16 @@ export const Icon = React.forwardRef<HTMLImageElement, IconProps>(
         height={size}
         className={cn(
           'inline-block transition-all',
-          fillColorOnHover && 'group-hover:brightness-0 group-hover:saturate-100',
+          fillColorOnHover &&
+            'group-hover:brightness-0 group-hover:saturate-100',
           className
         )}
         style={{
           ...style,
-          ...(fillColorOnHover && { '--icon-hover-color': fillColorOnHover } as React.CSSProperties),
+          ...(fillColorOnHover &&
+            ({
+              '--icon-hover-color': fillColorOnHover,
+            } as React.CSSProperties)),
         }}
         {...props}
       />

@@ -22,7 +22,7 @@ interface BackgroundsState {
   setIsGenerating: (isGenerating: boolean) => void
 }
 
-export const useBackgroundsStore = create<BackgroundsState>((set) => ({
+export const useBackgroundsStore = create<BackgroundsState>(set => ({
   backgrounds: [
     {
       id: 'default-1',
@@ -38,18 +38,17 @@ export const useBackgroundsStore = create<BackgroundsState>((set) => ({
   ],
   isGenerating: false,
 
-  addBackground: (background) =>
-    set((state) => ({
+  addBackground: background =>
+    set(state => ({
       backgrounds: [background, ...state.backgrounds],
     })),
 
   updateBackground: (id, updates) =>
-    set((state) => ({
-      backgrounds: state.backgrounds.map((bg) =>
+    set(state => ({
+      backgrounds: state.backgrounds.map(bg =>
         bg.id === id ? { ...bg, ...updates } : bg
       ),
     })),
 
-  setIsGenerating: (isGenerating) =>
-    set({ isGenerating }),
+  setIsGenerating: isGenerating => set({ isGenerating }),
 }))

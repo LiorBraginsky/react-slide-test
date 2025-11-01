@@ -37,11 +37,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="relative" style={{ width: size, height: size }}>
-        <svg
-          width={size}
-          height={size}
-          className="transform -rotate-90"
-        >
+        <svg width={size} height={size} className="transform -rotate-90">
           {/* Background circle */}
           <circle
             cx={size / 2}

@@ -27,8 +27,13 @@ export function useChangeBackground() {
   const [isTextareaFocused, setIsTextareaFocused] = useState(false)
   const intervalRef = useRef<number | null>(null)
 
-  const { backgrounds, isGenerating, addBackground, updateBackground, setIsGenerating } =
-    useBackgroundsStore()
+  const {
+    backgrounds,
+    isGenerating,
+    addBackground,
+    updateBackground,
+    setIsGenerating,
+  } = useBackgroundsStore()
 
   const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setBackgroundIdea(e.target.value)

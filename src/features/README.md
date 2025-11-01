@@ -5,6 +5,7 @@ Business features layer.
 ## Purpose
 
 A feature is a specific business function:
+
 - Has clear responsibility
 - Can be used in pages
 - Contains UI + logic for a single feature
@@ -14,9 +15,11 @@ A feature is a specific business function:
 This project currently has one feature:
 
 ### `change-background/`
+
 Background generation feature with progress tracking.
 
 **Structure:**
+
 ```
 change-background/
 ├── ui/
@@ -55,6 +58,7 @@ feature-name/
 ## Imports
 
 Features can import from:
+
 - ✅ `shared/` - shared components, utilities, global state
 - ❌ `app/` - NO
 - ❌ `pages/` - NO

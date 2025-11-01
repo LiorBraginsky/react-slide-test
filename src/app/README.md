@@ -5,6 +5,7 @@ Application configuration layer.
 ## Purpose
 
 Contains application initialization and configuration:
+
 - Root application component
 - Routing setup
 - Global providers (if needed)
@@ -18,6 +19,7 @@ app/
 ```
 
 ### App.tsx
+
 - Sets up React Router with `BrowserRouter`
 - Defines application routes
 - Currently has one route: `/` → `Home` page
@@ -32,6 +34,7 @@ app/
 ## Imports
 
 App layer imports from:
+
 - ✅ `pages/` - page components for routes
 - ✅ `shared/` - shared utilities
 - ❌ `features/` - NO (features are used in pages)
@@ -44,12 +47,13 @@ When adding a new page, update `App.tsx`:
 import { NewPage } from '@/pages/new-page'
 
 // In Routes:
-<Route path="/new-page" element={<NewPage />} />
+;<Route path="/new-page" element={<NewPage />} />
 ```
 
 ## Future Enhancements
 
 As the app grows, you might add:
+
 - `providers.tsx` - Global context providers (theme, auth, etc.)
 - `router.tsx` - Separate routing configuration
 - Error boundaries

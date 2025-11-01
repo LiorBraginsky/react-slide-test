@@ -11,7 +11,14 @@ interface BackgroundItemProps {
 export const BackgroundItem: React.FC<BackgroundItemProps> = ({
   background,
 }) => {
-  const { status, imageUrl, gradient, progress = 0, timeLeft = 0, isDefault } = background
+  const {
+    status,
+    imageUrl,
+    gradient,
+    progress = 0,
+    timeLeft = 0,
+    isDefault,
+  } = background
 
   return (
     <div className="relative w-[112px] h-[198px] rounded-[12px] overflow-hidden cursor-pointer transition-opacity hover:opacity-80">

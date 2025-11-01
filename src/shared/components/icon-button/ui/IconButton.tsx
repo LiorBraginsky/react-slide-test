@@ -74,7 +74,11 @@ export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         }}
         {...props}
       >
-        <Icon iconName={iconName} size={iconSize} fillColorOnHover={fillColorOnHover} />
+        <Icon
+          iconName={iconName}
+          size={iconSize}
+          fillColorOnHover={fillColorOnHover}
+        />
       </button>
     )
   }

@@ -7,6 +7,7 @@ Route pages layer.
 Each folder = one application page (route).
 
 A page:
+
 - Composes widgets and features
 - Has minimal own logic
 - Responsible for specific page layout
@@ -20,6 +21,7 @@ home/
 ```
 
 Or for larger pages:
+
 ```
 home/
 ├── ui/
@@ -37,6 +39,7 @@ home/
 ## Imports
 
 Pages can import from:
+
 - ✅ `widgets/` - complex blocks
 - ✅ `features/` - business features
 - ✅ `shared/` - shared components

@@ -5,6 +5,7 @@ Shared resources layer.
 ## Purpose
 
 Everything that is used across different parts of the application:
+
 - UI components without business logic
 - Utilities and helpers
 - Hooks
@@ -45,17 +46,20 @@ shared/
 ## shadcn/ vs components/
 
 **shadcn/** - auto-generated components from Shadcn UI:
+
 ```bash
 npx shadcn add button
 # Creates src/shared/shadcn/button.tsx
 ```
 
 **Usage:**
+
 ```tsx
 import { Sheet } from '@/shared/shadcn/sheet'
 ```
 
 **components/** - your custom UI components:
+
 ```tsx
 // badge/ui/Badge.tsx
 export function Badge({ children }: BadgeProps) {
@@ -69,11 +73,13 @@ import { Badge } from '@/shared/components/badge'
 ## Imports
 
 Shared **CANNOT** import from:
+
 - ❌ `app/`
 - ❌ `pages/`
 - ❌ `widgets/`
 - ❌ `features/`
 
 Shared can only import:
+
 - ✅ Other files from `shared/`
 - ✅ External libraries

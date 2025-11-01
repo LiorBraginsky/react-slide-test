@@ -27,7 +27,7 @@ export function Sidebar({
   children,
 }: SidebarProps) {
   return (
-    <Sheet open={isOpen} onOpenChange={(open) => !open && onClose()}>
+    <Sheet open={isOpen} onOpenChange={open => !open && onClose()}>
       <SheetContent side="right">
         {title && (
           <SheetHeader>
@@ -40,7 +40,9 @@ export function Sidebar({
         {description && (
           <SheetDescription className="mb-6">{description}</SheetDescription>
         )}
-        <div className="flex-1 overflow-y-auto custom-scrollbar pr-1">{children}</div>
+        <div className="flex-1 overflow-y-auto custom-scrollbar pr-1">
+          {children}
+        </div>
       </SheetContent>
     </Sheet>
   )
