@@ -1,0 +1,80 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: rgba(0, 0, 0, 1);
+    --card: 0 0% 100%;
+    --card-foreground: rgba(0, 0, 0, 1);
+    --popover: 0 0% 100%;
+    --popover-foreground: rgba(0, 0, 0, 1);
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: rgba(0, 0, 0, 1);
+    --radius: 0.5rem;
+
+    /* Button variables */
+    --button-background: rgba(0, 0, 0, 1);
+    --button-text: rgba(255, 255, 255, 1);
+    --button-hover: rgba(0, 0, 0, 0.85);
+
+    /* Icon Button variables */
+    --icon-button-background: transparent;
+    --icon-button-hover: rgba(0, 0, 0, 0.05);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom scrollbar styles */
+/* Firefox */
+@-moz-document url-prefix() {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(202, 212, 221, 1) transparent;
+  }
+}
+
+/* Webkit (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(202, 212, 221, 1);
+  border-radius: 100px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(182, 192, 201, 1);
+}
