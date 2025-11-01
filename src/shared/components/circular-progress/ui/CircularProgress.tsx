@@ -70,7 +70,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
       </div>
       {/* Time left */}
       <span className="mt-2 font-italian-plate font-demibold text-xs text-[rgba(255,255,255,1)]">
-        {timeLeft} second(s) left
+        {timeLeft} second{timeLeft > 1 && "s"} left
       </span>
     </div>
   )
