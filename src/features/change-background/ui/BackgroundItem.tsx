@@ -21,7 +21,7 @@ export const BackgroundItem: React.FC<BackgroundItemProps> = ({
   } = background
 
   return (
-    <div className="relative w-[112px] h-[198px] rounded-[12px] overflow-hidden cursor-pointer transition-opacity hover:opacity-80">
+    <div className="relative w-[112px] h-[198px] rounded-[12px]  overflow-hidden cursor-pointer transition-opacity hover:opacity-80">
       {/* Processing state */}
       {status === 'processing' && (
         <div className="absolute inset-0 bg-black flex items-center justify-center">
@@ -31,7 +31,7 @@ export const BackgroundItem: React.FC<BackgroundItemProps> = ({
 
       {/* Default state */}
       {status === 'default' && imageUrl && (
-        <>
+        <div className="absolute inset-0 border-2 border-black rounded-[12px] overflow-hidden">
           <img
             src={imageUrl}
             alt="default background"
@@ -42,7 +42,7 @@ export const BackgroundItem: React.FC<BackgroundItemProps> = ({
               <Badge>DEFAULT</Badge>
             </div>
           )}
-        </>
+        </div>
       )}
 
       {/* Completed state */}
